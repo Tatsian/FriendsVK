@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45F44E96FDABEAD957349E05 /* libPods-FriendsVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D15A59164ABD915AC4F89183 /* libPods-FriendsVK.a */; };
+		5B4E8F832453265D00DD1144 /* FriendsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F822453265D00DD1144 /* FriendsPageViewController.swift */; };
+		5B4E8F8A245364B000DD1144 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F89245364B000DD1144 /* API.swift */; };
+		5B4E8F8C245840BA00DD1144 /* FriendsPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */; };
+		5B4E8F8E245859E200DD1144 /* UIView + contsraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */; };
+		5B4E8F9124585E2100DD1144 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */; };
+		5B4E8F9324585E3B00DD1144 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9224585E3B00DD1144 /* UserResponse.swift */; };
+		5B4E8F9524589C9D00DD1144 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9424589C9C00DD1144 /* AuthService.swift */; };
+		5BE22B08244F318E00894FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B07244F318E00894FEF /* AppDelegate.swift */; };
+		5BE22B0A244F318E00894FEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B09244F318E00894FEF /* SceneDelegate.swift */; };
+		5BE22B11244F319400894FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22B10244F319400894FEF /* Assets.xcassets */; };
+		5BE22B14244F319400894FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22B12244F319400894FEF /* LaunchScreen.storyboard */; };
+		5BE22B21244F328300894FEF /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B20244F328300894FEF /* AuthView.swift */; };
+		5BE22B23244F32FD00894FEF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B22244F32FD00894FEF /* AuthViewController.swift */; };
+		5BE22B25244F341300894FEF /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B24244F341300894FEF /* UIColor+Hex.swift */; };
+		5BE22B2B244F3E4A00894FEF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22B2D244F3E4A00894FEF /* Localizable.strings */; };
+		5BE22B30244F41E000894FEF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B2F244F41E000894FEF /* String.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		411E8E88CFD26E997E48C890 /* Pods-FriendsVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsVK.release.xcconfig"; path = "Target Support Files/Pods-FriendsVK/Pods-FriendsVK.release.xcconfig"; sourceTree = "<group>"; };
+		4A97FE87254FA451B72F7EBA /* Pods-FriendsVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsVK.debug.xcconfig"; path = "Target Support Files/Pods-FriendsVK/Pods-FriendsVK.debug.xcconfig"; sourceTree = "<group>"; };
+		5B4E8F822453265D00DD1144 /* FriendsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPageViewController.swift; sourceTree = "<group>"; };
+		5B4E8F89245364B000DD1144 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPageTableViewCell.swift; sourceTree = "<group>"; };
+		5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + contsraints.swift"; sourceTree = "<group>"; };
+		5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
+		5B4E8F9224585E3B00DD1144 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		5B4E8F9424589C9C00DD1144 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		5BE22B04244F318E00894FEF /* FriendsVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE22B07244F318E00894FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BE22B09244F318E00894FEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5BE22B10244F319400894FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BE22B13244F319400894FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BE22B15244F319400894FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE22B20244F328300894FEF /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		5BE22B22244F32FD00894FEF /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		5BE22B24244F341300894FEF /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		5BE22B27244F3BF100894FEF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5BE22B2C244F3E4A00894FEF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BE22B2E244F3E8E00894FEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BE22B2F244F41E000894FEF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D15A59164ABD915AC4F89183 /* libPods-FriendsVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BE22B01244F318E00894FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F44E96FDABEAD957349E05 /* libPods-FriendsVK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAC926084693B8F241B6BDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A97FE87254FA451B72F7EBA /* Pods-FriendsVK.debug.xcconfig */,
+				411E8E88CFD26E997E48C890 /* Pods-FriendsVK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3CB148B3E7E2113E18DD29F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D15A59164ABD915AC4F89183 /* libPods-FriendsVK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B4E8F812453260700DD1144 /* FriendsPage */ = {
+			isa = PBXGroup;
+			children = (
+				5B4E8F8F24585DFE00DD1144 /* Model */,
+				5B4E8F822453265D00DD1144 /* FriendsPageViewController.swift */,
+				5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */,
+			);
+			path = FriendsPage;
+			sourceTree = "<group>";
+		};
+		5B4E8F84245362C600DD1144 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5B4E8F89245364B000DD1144 /* API.swift */,
+				5B4E8F9424589C9C00DD1144 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5B4E8F8F24585DFE00DD1144 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */,
+				5B4E8F9224585E3B00DD1144 /* UserResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BE22AFB244F318E00894FEF = {
+			isa = PBXGroup;
+			children = (
+				5BE22B06244F318E00894FEF /* FriendsVK */,
+				5BE22B05244F318E00894FEF /* Products */,
+				1BAC926084693B8F241B6BDA /* Pods */,
+				3CB148B3E7E2113E18DD29F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5BE22B05244F318E00894FEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B04244F318E00894FEF /* FriendsVK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BE22B06244F318E00894FEF /* FriendsVK */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B07244F318E00894FEF /* AppDelegate.swift */,
+				5BE22B09244F318E00894FEF /* SceneDelegate.swift */,
+				5B4E8F84245362C600DD1144 /* Service */,
+				5BE22B1C244F31C600894FEF /* Authorization */,
+				5B4E8F812453260700DD1144 /* FriendsPage */,
+				5BE22B1B244F31B400894FEF /* Extansions */,
+				5BE22B28244F3C8200894FEF /* Resources */,
+				5BE22B12244F319400894FEF /* LaunchScreen.storyboard */,
+				5BE22B15244F319400894FEF /* Info.plist */,
+			);
+			path = FriendsVK;
+			sourceTree = "<group>";
+		};
+		5BE22B1B244F31B400894FEF /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B24244F341300894FEF /* UIColor+Hex.swift */,
+				5BE22B2F244F41E000894FEF /* String.swift */,
+				5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */,
+			);
+			path = Extansions;
+			sourceTree = "<group>";
+		};
+		5BE22B1C244F31C600894FEF /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B1F244F31E800894FEF /* Controller */,
+				5BE22B1E244F31E200894FEF /* View */,
+				5BE22B1D244F31D700894FEF /* Model */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		5BE22B1D244F31D700894FEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BE22B1E244F31E200894FEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B20244F328300894FEF /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BE22B1F244F31E800894FEF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B22244F32FD00894FEF /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BE22B28244F3C8200894FEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BE22B10244F319400894FEF /* Assets.xcassets */,
+				5BE22B2D244F3E4A00894FEF /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BE22B03244F318E00894FEF /* FriendsVK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BE22B18244F319400894FEF /* Build configuration list for PBXNativeTarget "FriendsVK" */;
+			buildPhases = (
+				204BE62E586EE9A888B52C93 /* [CP] Check Pods Manifest.lock */,
+				5BE22B00244F318E00894FEF /* Sources */,
+				5BE22B01244F318E00894FEF /* Frameworks */,
+				5BE22B02244F318E00894FEF /* Resources */,
+				60EB12D957B3C6231D0C4334 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FriendsVK;
+			productName = FriendsVK;
+			productReference = 5BE22B04244F318E00894FEF /* FriendsVK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BE22AFC244F318E00894FEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Tatsiana;
+				TargetAttributes = {
+					5BE22B03244F318E00894FEF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 5BE22AFF244F318E00894FEF /* Build configuration list for PBXProject "FriendsVK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = 5BE22AFB244F318E00894FEF;
+			productRefGroup = 5BE22B05244F318E00894FEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BE22B03244F318E00894FEF /* FriendsVK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BE22B02244F318E00894FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE22B14244F319400894FEF /* LaunchScreen.storyboard in Resources */,
+				5BE22B2B244F3E4A00894FEF /* Localizable.strings in Resources */,
+				5BE22B11244F319400894FEF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		204BE62E586EE9A888B52C93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FriendsVK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60EB12D957B3C6231D0C4334 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FriendsVK/Pods-FriendsVK-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FriendsVK/Pods-FriendsVK-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FriendsVK/Pods-FriendsVK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BE22B00244F318E00894FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE22B30244F41E000894FEF /* String.swift in Sources */,
+				5B4E8F9124585E2100DD1144 /* FriendsResponse.swift in Sources */,
+				5BE22B23244F32FD00894FEF /* AuthViewController.swift in Sources */,
+				5B4E8F8C245840BA00DD1144 /* FriendsPageTableViewCell.swift in Sources */,
+				5B4E8F832453265D00DD1144 /* FriendsPageViewController.swift in Sources */,
+				5B4E8F8A245364B000DD1144 /* API.swift in Sources */,
+				5B4E8F9524589C9D00DD1144 /* AuthService.swift in Sources */,
+				5BE22B08244F318E00894FEF /* AppDelegate.swift in Sources */,
+				5BE22B0A244F318E00894FEF /* SceneDelegate.swift in Sources */,
+				5B4E8F8E245859E200DD1144 /* UIView + contsraints.swift in Sources */,
+				5BE22B21244F328300894FEF /* AuthView.swift in Sources */,
+				5BE22B25244F341300894FEF /* UIColor+Hex.swift in Sources */,
+				5B4E8F9324585E3B00DD1144 /* UserResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BE22B12244F319400894FEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BE22B13244F319400894FEF /* Base */,
+				5BE22B27244F3BF100894FEF /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BE22B2D244F3E4A00894FEF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BE22B2C244F3E4A00894FEF /* ru */,
+				5BE22B2E244F3E8E00894FEF /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BE22B16244F319400894FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BE22B17244F319400894FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BE22B19244F319400894FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A97FE87254FA451B72F7EBA /* Pods-FriendsVK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVWAR2B4J4;
+				INFOPLIST_FILE = FriendsVK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lessonOne.FriendsVK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BE22B1A244F319400894FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411E8E88CFD26E997E48C890 /* Pods-FriendsVK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVWAR2B4J4;
+				INFOPLIST_FILE = FriendsVK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lessonOne.FriendsVK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BE22AFF244F318E00894FEF /* Build configuration list for PBXProject "FriendsVK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BE22B16244F319400894FEF /* Debug */,
+				5BE22B17244F319400894FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BE22B18244F319400894FEF /* Build configuration list for PBXNativeTarget "FriendsVK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BE22B19244F319400894FEF /* Debug */,
+				5BE22B1A244F319400894FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BE22AFC244F318E00894FEF /* Project object */;
+}
