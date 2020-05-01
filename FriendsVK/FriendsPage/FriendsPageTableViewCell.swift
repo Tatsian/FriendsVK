@@ -12,22 +12,9 @@ class FriendsPageTableViewCell: UITableViewCell {
     
     let nameLabel = UILabel()
     let friendsFoto = UIImageView()
-    
-    override var bounds: CGRect {
-        didSet {
-            self.layoutIfNeeded()
-        }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        //          self.friendsFoto.layer.masksToBounds = true
-    }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         self.setCircularImageView()
     }
     
@@ -43,22 +30,17 @@ class FriendsPageTableViewCell: UITableViewCell {
     }
     
     func setCircularImageView() {
-        self.friendsFoto.layer.cornerRadius = CGFloat(roundf(Float(self.friendsFoto.frame.size.width / 2.0)))
+        self.friendsFoto.layer.cornerRadius = self.friendsFoto.frame.size.width / 2.0
     }
     
     private func createNameLabel() {
-        //        nameLabel.text = "Simple name"
         nameLabel.font = UIFont.boldSystemFont(ofSize: 14)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(nameLabel)
     }
     
     private func createFriendsFoto() {
-        //        let foto = UIImage(named: "exFoto")
-        //        friendsFoto.image = foto
-        
         friendsFoto.layer.masksToBounds = true
-        friendsFoto.layer.cornerRadius = friendsFoto.frame.width / 2
         friendsFoto.translatesAutoresizingMaskIntoConstraints = false
         addSubview(friendsFoto)
     }

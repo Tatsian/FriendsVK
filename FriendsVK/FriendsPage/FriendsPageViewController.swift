@@ -66,13 +66,6 @@ extension FriendsPageViewController: UITableViewDelegate, UITableViewDataSource 
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FriendsPageTableViewCell
-        //        cell.imageView?.clipsToBounds = true
-        //        cell.imageView?.layer.borderWidth = 1
-        //        cell.imageView?.layer.borderColor = (UIColor.white as! CGColor)
-        //        cell.imageView?.layer.backgroundColor = (UIColor.black as! CGColor)
-        //        cell.textLabel?.text = "Simple name"
-        //        cell.imageView?.layer.masksToBounds = true
-        //        cell.imageView?.layer.cornerRadius = 80
         
         //        let currentFriends = friendsArray[indexPath.row]
         //        cell.textLabel?.text = currentFriends.name + " " +  currentFriends.lastName
