@@ -12,9 +12,13 @@
 		5B4E8F8A245364B000DD1144 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F89245364B000DD1144 /* API.swift */; };
 		5B4E8F8C245840BA00DD1144 /* FriendsPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */; };
 		5B4E8F8E245859E200DD1144 /* UIView + contsraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */; };
-		5B4E8F9124585E2100DD1144 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */; };
+		5B4E8F9124585E2100DD1144 /* FriendsResponseDELETE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9024585E2100DD1144 /* FriendsResponseDELETE.swift */; };
 		5B4E8F9324585E3B00DD1144 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9224585E3B00DD1144 /* UserResponse.swift */; };
 		5B4E8F9524589C9D00DD1144 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F9424589C9C00DD1144 /* AuthService.swift */; };
+		5B4E8F97245E108400DD1144 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F96245E108200DD1144 /* NetworkService.swift */; };
+		5B4E8F99245E3ED100DD1144 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8F98245E3ED100DD1144 /* NetworkDataFetcher.swift */; };
+		5B4E8FBB24608AEB00DD1144 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8FBA24608AEA00DD1144 /* FriendsResponse.swift */; };
+		5B4E8FBD2463442800DD1144 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E8FBC2463442700DD1144 /* UIImage.swift */; };
 		5BE22B08244F318E00894FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B07244F318E00894FEF /* AppDelegate.swift */; };
 		5BE22B0A244F318E00894FEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22B09244F318E00894FEF /* SceneDelegate.swift */; };
 		5BE22B11244F319400894FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22B10244F319400894FEF /* Assets.xcassets */; };
@@ -33,9 +37,13 @@
 		5B4E8F89245364B000DD1144 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPageTableViewCell.swift; sourceTree = "<group>"; };
 		5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + contsraints.swift"; sourceTree = "<group>"; };
-		5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
+		5B4E8F9024585E2100DD1144 /* FriendsResponseDELETE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponseDELETE.swift; sourceTree = "<group>"; };
 		5B4E8F9224585E3B00DD1144 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		5B4E8F9424589C9C00DD1144 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		5B4E8F96245E108200DD1144 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5B4E8F98245E3ED100DD1144 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		5B4E8FBA24608AEA00DD1144 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
+		5B4E8FBC2463442700DD1144 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5BE22B04244F318E00894FEF /* FriendsVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE22B07244F318E00894FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE22B09244F318E00894FEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,8 @@
 				5B4E8F8F24585DFE00DD1144 /* Model */,
 				5B4E8F822453265D00DD1144 /* FriendsPageViewController.swift */,
 				5B4E8F8B245840B000DD1144 /* FriendsPageTableViewCell.swift */,
+				5B4E8F96245E108200DD1144 /* NetworkService.swift */,
+				5B4E8F98245E3ED100DD1144 /* NetworkDataFetcher.swift */,
 			);
 			path = FriendsPage;
 			sourceTree = "<group>";
@@ -103,8 +113,9 @@
 		5B4E8F8F24585DFE00DD1144 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B4E8F9024585E2100DD1144 /* FriendsResponse.swift */,
+				5B4E8F9024585E2100DD1144 /* FriendsResponseDELETE.swift */,
 				5B4E8F9224585E3B00DD1144 /* UserResponse.swift */,
+				5B4E8FBA24608AEA00DD1144 /* FriendsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 			children = (
 				5BE22B24244F341300894FEF /* UIColor+Hex.swift */,
 				5BE22B2F244F41E000894FEF /* String.swift */,
+				5B4E8FBC2463442700DD1144 /* UIImage.swift */,
 				5B4E8F8D245859E200DD1144 /* UIView + contsraints.swift */,
 			);
 			path = Extansions;
@@ -312,16 +324,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE22B30244F41E000894FEF /* String.swift in Sources */,
-				5B4E8F9124585E2100DD1144 /* FriendsResponse.swift in Sources */,
+				5B4E8F9124585E2100DD1144 /* FriendsResponseDELETE.swift in Sources */,
 				5BE22B23244F32FD00894FEF /* AuthViewController.swift in Sources */,
 				5B4E8F8C245840BA00DD1144 /* FriendsPageTableViewCell.swift in Sources */,
 				5B4E8F832453265D00DD1144 /* FriendsPageViewController.swift in Sources */,
 				5B4E8F8A245364B000DD1144 /* API.swift in Sources */,
+				5B4E8FBD2463442800DD1144 /* UIImage.swift in Sources */,
+				5B4E8F97245E108400DD1144 /* NetworkService.swift in Sources */,
 				5B4E8F9524589C9D00DD1144 /* AuthService.swift in Sources */,
 				5BE22B08244F318E00894FEF /* AppDelegate.swift in Sources */,
+				5B4E8F99245E3ED100DD1144 /* NetworkDataFetcher.swift in Sources */,
 				5BE22B0A244F318E00894FEF /* SceneDelegate.swift in Sources */,
 				5B4E8F8E245859E200DD1144 /* UIView + contsraints.swift in Sources */,
 				5BE22B21244F328300894FEF /* AuthView.swift in Sources */,
+				5B4E8FBB24608AEB00DD1144 /* FriendsResponse.swift in Sources */,
 				5BE22B25244F341300894FEF /* UIColor+Hex.swift in Sources */,
 				5B4E8F9324585E3B00DD1144 /* UserResponse.swift in Sources */,
 			);

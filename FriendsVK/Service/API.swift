@@ -11,8 +11,8 @@ import Foundation
 struct API {
     static let scheme = "https"
     static let host = "api.vk.com"
-    static let version = "5.69"
+    static let version = "5.103"
     
-    static let friendsFeed = "/method/friends.getRequests"
+    static let friends = "/method/friends.get"
     static let user = "/method/users.get"
 }

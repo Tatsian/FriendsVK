@@ -12,10 +12,20 @@ struct UserResponseWrapped: Decodable {
     let response: [UserResponse]
 }
 
-struct UserResponse: Decodable {
+struct UserResponse: Codable {
     let firstName: String
     let lastName: String
-    let photo100: String?
+    var photo50: String
 
     var name: String { return firstName + " " + lastName }
+    
+    enum CodingKeys: String, CodingKey {
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case photo50 = "photo_50"
+    }
+    
+//    init?() {
+//         return nil
+//     }
 }

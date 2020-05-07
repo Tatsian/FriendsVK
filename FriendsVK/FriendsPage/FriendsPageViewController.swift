@@ -9,16 +9,22 @@
 import UIKit
 import VK_ios_sdk
 
-class FriendsPageViewController: UIViewController {
+final class FriendsPageViewController: UIViewController {
     
     let cellId = "cellId"
-    let friendsArray = [Profile]()
+    var user: UserResponse?
+    var friendsArray = [FriendsItems]()
     let tableView = UITableView()
+//    let urlString = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vkGetUser()
+        vkGetFriends()
         createNavigationItem()
         setupTableView()
+
     }
 
     private func createNavigationItem() {
@@ -27,10 +33,12 @@ class FriendsPageViewController: UIViewController {
                                                            target: self,
                                                            action: #selector(logoutButtonPressed))
         navigationItem.leftBarButtonItem?.tintColor = .white
-        navigationItem.title = "User name".localized
-        let image = UIImage(named: "image2")
-        let imageView = UIImageView(image: image)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
+        navigationItem.title = "user name"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+//        let image = UIImage(named: "image2")
+//        let imageView = UIImageView(image: image)
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
         UINavigationBar.appearance().barTintColor = UIColor(hex: "#416794")
     }
     
@@ -39,9 +47,6 @@ class FriendsPageViewController: UIViewController {
         let authController = AuthViewController()
         authController.modalPresentationStyle = .fullScreen
         view.window?.rootViewController = authController
-        
-        //    present(authController, animated: true, completion: nil)
-        print("logout was pressed")
     }
 
     func setupTableView() {
@@ -57,11 +62,76 @@ class FriendsPageViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
+
+    func downloadData() {
+        //  guard let url = URL(string: VKApiFriends.VKRequest.get) else { return }
+    }
+    
+    func vkGetUser(){
+        let request: VKRequest = VKRequest(method: "users.get",
+                                          parameters: ["fields": "photo_50"])
+
+        request.execute(
+            resultBlock: {
+                (response) -> Void in
+                
+                guard let responseString = response?.responseString as String? else { return }
+                guard let responseData = responseString.data(using: .utf8) else { return }
+                do {
+                    let usersList = try JSONDecoder().decode(UserResponseWrapped.self, from: responseData)
+                    self.user = usersList.response[0]
+                    print(self.user)
+                    DispatchQueue.main.async {
+                        self.navigationItem.title = self.user?.name
+                        guard let url = URL(string: self.user?.photo50 ?? "") else { return }
+
+                        UIImage.loadFrom(url: url) { image in
+                            guard let img = image else { return }
+                            let imageView = UIImageView(image: image)
+                            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
+                        }
+                    }
+                } catch let error {
+                    print("there is an error: \(error)")
+                }
+        }, errorBlock: {
+            (error) -> Void in
+            print("error")
+        })
+
+        
+    }
+    
+    func vkGetFriends() {
+        let requestFriends: VKRequest = VKRequest(method: "friends.get",
+                                                  parameters: ["fields": "photo_50"])
+        
+        requestFriends.execute(
+            resultBlock: {
+                (response) -> Void in
+                guard let responseString = response?.responseString as String? else { return }
+                guard let responseData = responseString.data(using: .utf8) else { return }
+                do {
+                    let friendsList = try JSONDecoder().decode(FriendsResponseWrapped.self, from: responseData)
+                    self.friendsArray = friendsList.response.items
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    print(self.friendsArray)
+                } catch let error {
+                    print("there is an error: \(error)")
+                }
+        }, errorBlock: {
+            (error) -> Void in
+            print("error")
+            
+        })
+    }
 }
 
 extension FriendsPageViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return friendsArray.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,8 +142,18 @@ extension FriendsPageViewController: UITableViewDelegate, UITableViewDataSource 
         //        cell.friendsFoto.image = currentFriends.photo
         
         cell.friendsFoto.image = UIImage(named: "exFoto")
-        cell.nameLabel.text = "Simple name"
-        
+        cell.nameLabel.text = friendsArray[indexPath.row].name
+        guard let url = URL(string: friendsArray[indexPath.row].photo50) else { return cell}
+
+        UIImage.loadFrom(url: url) { image in
+            cell.friendsFoto.image = image
+        }
+
+//        let url = URL(string: friendsArray[indexPath.row].photo50)
+//
+//         UIImage.loadFrom(url: url!) { image in
+//             cell.friendsFoto.image = image
+//         }
         return cell
     }
 }
