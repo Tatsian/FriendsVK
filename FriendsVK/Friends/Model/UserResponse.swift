@@ -24,8 +24,4 @@ struct UserResponse: Codable {
         case lastName = "last_name"
         case photo50 = "photo_50"
     }
-    
-//    init?() {
-//         return nil
-//     }
 }

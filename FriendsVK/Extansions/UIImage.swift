@@ -10,15 +10,15 @@ import UIKit
 
 extension UIImage {
 
-    public static func loadFrom(url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
+    static func loadFrom(url: URL, completion: @escaping (UIImage?, URL?) -> Void) {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
-                    completion(UIImage(data: data))
+                    completion(UIImage(data: data), url)
                 }
             } else {
                 DispatchQueue.main.async {
-                    completion(nil)
+                    completion(nil, nil)
                 }
             }
         }

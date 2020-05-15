@@ -21,19 +21,14 @@ final class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        logInButton.isHidden = true
         let sdkInstance = VKSdk.initialize(withAppId: "7424269")
         sdkInstance?.uiDelegate = self
-        
         sdkInstance?.register(self)
         
         view.backgroundColor = UIColor(hex: "#416794")
         createLogoImg()
         createAuthorizationButton()
-        createConstraints()
-        
-        
-        
+        createConstraints()      
     }
 
     private func createLogoImg() {
@@ -59,15 +54,6 @@ final class AuthViewController: UIViewController {
     @objc func pressAuthButton(_ sender: UIButton!) {
         print("It's perfect")
         VKSdk.authorize(scope)
-//        
-//        VKSdk.wakeUpSession(scope) { [weak self] (state, error) in
-//            if state == .authorized {
-//                self?.showFriendsPage()
-//            } else {
-//                self?.logInButton.isHidden = false
-//
-//            }
-//        }
     }
     
     private func createConstraints() {
@@ -88,12 +74,10 @@ final class AuthViewController: UIViewController {
     }
     
     func showFriendsPage() {
-        let friendVC = FriendsPageViewController()
+        let friendVC = FriendsViewController()
         let navVC = UINavigationController()
         navVC.viewControllers = [friendVC]
-//        friendVC.modalPresentationStyle = .fullScreen
         view.window?.rootViewController = navVC
-//        present(FriendsPageViewController(), animated: true, completion: nil)
     }
 }
 

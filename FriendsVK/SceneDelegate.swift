@@ -38,7 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if state == VKAuthorizationState.authorized {
                 let navigationVC = UINavigationController()
                 self.window?.rootViewController = navigationVC
-                navigationVC.viewControllers = [FriendsPageViewController()]
+                navigationVC.viewControllers = [FriendsViewController()]
             } else {
                 self.window?.rootViewController = AuthViewController()
             }
@@ -79,6 +79,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             VKSdk.processOpen(context.url, fromApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue)
         }
     }
-
 }
 
